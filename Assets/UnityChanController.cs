@@ -98,7 +98,7 @@ public class UnityChanController : MonoBehaviour {
         {
 			this.score += 10;
 
-			this.scoreText.GetComponent<Text>().text = "Score" + this.score + "pt";
+			this.scoreText.GetComponent<Text>().text = "Score  " + this.score + "pt";
 			GetComponent<ParticleSystem>().Play();
 			Destroy(other.gameObject);
         }
@@ -106,12 +106,11 @@ public class UnityChanController : MonoBehaviour {
 
 	public void GetMyJumpButtonDown()
     {
-		if(this.transform.position.y < 0.5f)
-        {
+		if (this.transform.position.y < 0.5f)
+		{
 			this.myAnimator.SetBool("Jump", true);
 			this.myRigidbody.AddForce(this.transform.up * this.upForce);
-
-        }
+		}
     }
 
 	public void GetMyLeftButtonDown()
